@@ -10,7 +10,7 @@ import           Test.Hspec.Core.Runner
 import           Test.Hspec.Core.Spec   hiding (pending)
 
 blink :: [T.Text] -> Sh T.Text
-blink = verbosely . (run "blink1-tool")
+blink = verbosely . run "blink1-tool"
 
 failed :: Sh T.Text
 failed = blink ["--rgb=255,0,0"]
