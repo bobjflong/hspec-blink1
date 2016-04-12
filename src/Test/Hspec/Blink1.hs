@@ -2,12 +2,12 @@
 
 module Test.Hspec.Blink1 where
 
-import Shelly
-import qualified Data.Text as T
-import Test.Hspec hiding (pending)
-import Test.Hspec.Core.Runner
-import Test.Hspec.Core.Spec hiding (pending)
-import Control.Concurrent
+import           Control.Concurrent
+import qualified Data.Text              as T
+import           Shelly
+import           Test.Hspec             hiding (pending)
+import           Test.Hspec.Core.Runner
+import           Test.Hspec.Core.Spec   hiding (pending)
 
 blink :: [T.Text] -> Sh T.Text
 blink = verbosely . (run "blink1-tool")
